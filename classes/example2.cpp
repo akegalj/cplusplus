@@ -1,4 +1,4 @@
-// ecample: one slass, two objects
+// ecample: one class, two objects
 #include<iostream>
 using namespace std;
 
