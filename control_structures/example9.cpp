@@ -5,7 +5,7 @@ using namespace std;
 
 void printmessage()
 {
-  cout << "I'. a function!";
+  cout << "I'm a function!";
 }
 
 int main()

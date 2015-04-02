@@ -18,7 +18,7 @@ int main()
   cout << "The second result is " << subtraction(7, 2) << '\n';
   cout << "The third result is " << subtraction(x, y) << '\n';
   z = 4 + subtraction(x, y);
-  cout << "The fourtg result is " << z << '\n';
+  cout << "The fourth result is " << z << '\n';
 
   return 0;
 }
