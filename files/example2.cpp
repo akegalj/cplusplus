@@ -11,6 +11,6 @@ int main(){
     myfile << "This is another line.\n";
     myfile.close();
   }
-  else cout << "Unable to open gile";
+  else cout << "Unable to open file";
   return 0;
 }
