@@ -32,7 +32,6 @@ void Philosopher::think(){
   pthread_mutex_lock(&mon);
   std::cout << "Philosopher " << id << " is thinking" << std::endl;
   pthread_mutex_unlock(&mon);
-  srand(time(NULL));
   sleep(rand()%3 + 1);
 }
 
@@ -58,7 +57,7 @@ void Philosopher::take_fork(){
 void Philosopher::put_fork(){
   pthread_mutex_lock(&mon);
   fork[id] = fork[(id + 1)%N] = true;
-  pthread_cond_signal(cond + (id-1)%N);
+  pthread_cond_signal(cond + (N+id-1)%N);
   pthread_cond_signal(cond + (id+1)%N);
   std::cout << "Philosopher " << id << " put forks down" << std::endl;
   pthread_mutex_unlock(&mon);
