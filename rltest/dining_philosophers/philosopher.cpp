@@ -43,7 +43,7 @@ void Philosopher::eat(){
   put_fork();
 }
 
-// Taking fork. If eather lef or right fork is taken, wait.
+// Taking fork. If eather left or right fork is taken, wait.
 void Philosopher::take_fork(){
   pthread_mutex_lock(&mon);
   std::cout << "Philosopher " << id << " is waiting on forks" << std::endl;
